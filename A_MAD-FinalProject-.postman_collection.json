@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "2408e223-8add-4bcc-bd06-cb063945ce78",
+		"name": "A_MAD/FinalProject/",
+		"description": "Contains the lost and documentation of all the APIs for the final project of Advanced MAD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name ",
+							"value": "wewewewew",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "sunidhi",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "ADMIN",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/create_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create_user"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "This request is a POST request and can create all types of users including admin (ADMIN | EXHIBIT | EVALUATOR)\n\nThings to send in the body\nname: String\nemail: String\nusername: String\npassword: String\nrole: enum: ['ADMIN', 'EXHIBIT','EVALUATOR'] - default - admin"
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "ADMIN",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/user_login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user_login"
+					]
+				},
+				"description": "this API logs in to with the given \nusername\npassword\nrole\nand retuns the jwt token if successfully loggged in\n"
+			},
+			"response": []
+		}
+	]
+}
