@@ -9,7 +9,7 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://amad123:amad123@cluster0-mnw6b.mongodb.net/records?retryWrites=true', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://archit:archit@cluster0-axmyu.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
 var db = mongoose.connection;
 
 app.use(express.static('images')); //Serves resources from public folder
