@@ -14,8 +14,8 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"type": "text"
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
 					}
 				],
 				"body": {
@@ -30,22 +30,24 @@
 						{
 							"key": "email",
 							"value": "admin@admin.com",
-							"type": "text"
+							"type": "text",
+							"disabled": true
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "admin1",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "password",
+							"value": "password1",
 							"type": "text"
 						},
 						{
 							"key": "name",
 							"value": "sunidhi",
-							"type": "text"
+							"type": "text",
+							"disabled": true
 						},
 						{
 							"key": "role",
@@ -84,8 +86,8 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"type": "text"
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
 					}
 				],
 				"body": {
@@ -120,6 +122,146 @@
 					]
 				},
 				"description": "this API logs in to with the given \nusername\npassword\nrole\nand retuns the jwt token if successfully loggged in\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Add a question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "question",
+							"value": "what is your name?",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/create_question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create_question"
+					]
+				},
+				"description": "This request takes in a question and adds the question in the Survey Database"
+			},
+			"response": []
+		},
+		{
+			"name": "Update a question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "old",
+							"value": "what is your name?",
+							"type": "text"
+						},
+						{
+							"key": "new",
+							"value": "dsfsdf",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/update_question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update_question"
+					]
+				},
+				"description": "This request takes in 2 things:\nold:\nnew:\n\nold -  the question to be updates\nnew - the question you want to update to\n"
+			},
+			"response": []
+		},
+		{
+			"name": "get all questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/get_all_questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get_all_questions"
+					]
+				},
+				"description": "get request to get all the questions from the database"
+			},
+			"response": []
+		},
+		{
+			"name": "delete a question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "question",
+							"value": "null",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/delete_question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete_question"
+					]
+				},
+				"description": "this post request deletes a question. takes in that question as a argument\n"
 			},
 			"response": []
 		}
