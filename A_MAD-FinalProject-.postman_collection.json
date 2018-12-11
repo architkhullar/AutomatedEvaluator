@@ -425,18 +425,33 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "scores",
-							"value": "[0,0,0]",
+							"key": "scores[0]",
+							"value": "0",
 							"type": "text"
 						},
 						{
 							"key": "evaluator",
-							"value": "evaluator 3",
+							"value": "evaluator 5",
 							"type": "text"
 						},
 						{
 							"key": "exhibit",
-							"value": "exhibit 3",
+							"value": "exhibit 5",
+							"type": "text"
+						},
+						{
+							"key": "scores[1]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "scores[2]",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "scores[3]",
+							"value": "3",
 							"type": "text"
 						}
 					]

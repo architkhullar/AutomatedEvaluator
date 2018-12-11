@@ -11,7 +11,7 @@ var ScoreSchema = new Schema({
     type: String,
     required: 'Kindly enter the age of the exhibit'
   },
-  scores: {type: String}
+  scores: [{type: String}]
 });
 
 

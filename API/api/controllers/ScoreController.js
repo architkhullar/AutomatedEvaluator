@@ -6,6 +6,7 @@ var mongoose = require('mongoose'),
 
 // add score for 1 person
   exports.add_score = function(req, res) {
+    console.log(req.body);
     Score.findOne({
     evaluator: req.body.evaluator,
     exhibit: req.body.exhibit
