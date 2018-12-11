@@ -2,6 +2,7 @@
 module.exports = function(app) {
   var UserHandlers = require('../controllers/UserController.js');
   var SurveyHandlers = require('../controllers/SurveyController.js');
+  var ScoreHandlers = require('../controllers/ScoreController.js');
 
 
   app.route('/create_user')
@@ -9,6 +10,18 @@ module.exports = function(app) {
 
   app.route('/user_login')
       .post(UserHandlers.user_login);
+
+  app.route('/get_teams')
+      .get(UserHandlers.get_teams);
+
+  app.route('/get_evaluators')
+      .get(UserHandlers.get_evaluators);
+
+  app.route('/update_user')
+      .post(UserHandlers.update_user);
+
+  app.route('/delete_user')
+      .post(UserHandlers.delete_user);
 
   app.route('/create_question')
       .post(SurveyHandlers.create_question);
@@ -21,6 +34,9 @@ module.exports = function(app) {
 
   app.route('/delete_question')
       .post(SurveyHandlers.delete_question);
+
+  app.route('/add_score')
+      .post(ScoreHandlers.add_score);
 
 
     };
