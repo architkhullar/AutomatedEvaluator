@@ -38,5 +38,10 @@ module.exports = function(app) {
   app.route('/add_score')
       .post(ScoreHandlers.add_score);
 
+  app.route('/get_evaluator_response')
+      .post(ScoreHandlers.get_evaluator_response);
+
+  app.route('/get_all_scores')
+      .get(ScoreHandlers.get_all_scores);
 
     };
